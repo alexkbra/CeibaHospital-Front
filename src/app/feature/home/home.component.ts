@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
       container: 'files',
       filename: file.name,
       storageAccessToken:
-        '?sv=2020-02-10&ss=b&srt=sco&sp=rwdlacx&se=2021-03-03T04:38:00Z&st=2021-03-02T20:38:00Z&spr=https&sig=bAzEcOsLv%2BqtIJhz5Ft4MIA7hPs%2FBBVVwufPH3w6V9M%3D',
+        '?sv=2020-02-10&ss=b&srt=sco&sp=rwdlacx&se=2021-03-28T00:31:39Z&st=2021-03-03T16:31:39Z&spr=https&sig=Y8NyrfuXE7NpffgVt5b1o4zRHXMVB%2BNp3J%2FNcqkJwC4%3D',
       storageUri: 'https://hospitalceibastorage.blob.core.windows.net'
     };
 

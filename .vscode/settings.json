@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/157398c7-9133-4911-a777-43740e065825/resourceGroups/storage-shared/providers/Microsoft.Web/sites/ceibahospitalv2"
+}
