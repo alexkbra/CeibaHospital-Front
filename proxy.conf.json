@@ -6,5 +6,4 @@
     "changeOrigin": true,
     "pathRewrite": {"^http://52.226.170.146/microservice" : ""}
   }
-
 }
