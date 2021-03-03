@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: 'microservice'
+  endpoint: 'http://52.226.170.146/microservice'
 };
