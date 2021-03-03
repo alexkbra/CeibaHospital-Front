@@ -1,10 +1,10 @@
 {
   "/microservice": {
-    "target": "http://40.88.208.233",
+    "target": "http://52.226.170.146",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true,
-    "pathRewrite": {"^http://40.88.208.233/microservice" : ""}
+    "pathRewrite": {"^http://52.226.170.146/microservice" : ""}
   }
 
 }
