@@ -1,0 +1,10 @@
+<h1>Welcome!! to hospital ceiba </h1>
+<h2>Sube un archivo a Azure Storeg</h2>
+<input type="file" multiple="multiple" (change)="onFileChange($event)" />
+<div *ngIf="filesSelected">
+    <h3>Progreso de carga</h3> 
+    <pre>{{uploadProgress$ | async | json}}</pre>
+</div>
+<h2>Envía mensaje a Service bus</h2>
+{{mensaje}}
+<button type="button" value="Enviar" (click)="enviarMensaje()">Enviar mensaje</button>

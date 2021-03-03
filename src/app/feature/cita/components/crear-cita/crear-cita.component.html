@@ -1,0 +1,29 @@
+<div class="container-sm">
+    <div class="row">
+        <h2>Reservar cita</h2>
+    </div>
+    <div class="row g-3">
+
+        <form [formGroup]="citaReservarForm" (ngSubmit)="reserva()">
+            <div class="mb-3">
+                <label for="fechaCita" class="form-label">Fecha de la cita:</label>
+                <input validar type="date" step="1" class="form-control" id="fechaCita" formControlName="fechaCita" >
+                <div id="fechaCitaHelp" class="form-text">Recuerda poner la fecha superior a la de hoy {{ today | date:'mediumDate' }}   .</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="tiempoCita"  class="form-label">Hora de la cita:</label>
+                <input validar type="time" id="tiempofechaCita" formControlName="tiempofechaCita" class="form-control" >
+            </div>    
+
+            <div class="mb-3 ">
+                <label for="especialista" class="form-label">Especialista:</label>
+                <select validar class="form-select" name="especialista" id="especialista" formControlName="especialista" >
+                    <option *ngFor="let especialista of listaEspecialista" value="{{especialista.id}}" >{{especialista.nombre}}</option>
+                </select>
+            </div>
+            <button type="submit" id="submitReservarCita" class="btn btn-primary">Reserva</button>
+        </form>
+
+    </div>
+</div>

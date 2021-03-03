@@ -1,0 +1,33 @@
+<div class="container-sm">
+    <div class="row">
+        <h2>Crear usuario</h2>
+    </div>
+    <div class="row g-3">
+
+        <form [formGroup]="usuarioCrearForm" (ngSubmit)="crear()">
+            <div class="col">
+                <label for="tipoDocumento" class="form-label">Tipo Documento:</label>
+                <select validar class="form-select" name="tipoDocumento" formControlName="tipoDocumento">
+                    <option value="CC" selected>Cédula de ciudadanía</option>
+                    <option value="RC">Registro Civil</option>
+                    <option value="CE">Cédula de extranjería.</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="numeroDocumento" class="form-label">Número Documento:</label>
+                <input validar type="text" id="numeroDocumento" name="numeroDocumento" placeholder="Eje: 1017205545"
+                    class="form-control" formControlName="numeroDocumento">
+            </div>
+            <div class="col">
+                <label for="estrato" class="form-label">Estrato:</label>
+                <select validar class="form-select" name="estrato" formControlName="estrato">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <button type="submit" id="submitCrearUsuario" class="btn btn-primary">Crear</button>
+        </form>
+
+    </div>
+</div>

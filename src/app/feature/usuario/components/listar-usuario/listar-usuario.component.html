@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Número Documento</th>
+        <th scope="col">Tipo Documento</th>
+        <th scope="col">Estrato</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of listarUsuario">
+        <th scope="row">{{usuario.id}}</th>
+        <td>{{usuario.numeroDocumento}}</td>
+        <td>{{usuario.tipoDocumento}}</td>
+        <td>{{usuario.estrato}}</td>
+        <td>
+            <button type="button" class="btn btn-primary" (click)="editar(usuario)">Editar</button>
+            <button type="button" class="btn btn-danger" (click)="eliminar(usuario.id)" >Eliminar</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>

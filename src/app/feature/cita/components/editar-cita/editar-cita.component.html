@@ -1,0 +1,27 @@
+<div class="container-sm">
+    <div class="row">
+        <h2>Actualiza la fecha de reservar</h2>
+    </div>
+    <div class="row g-3">
+
+        <div class="mb-3">
+            <label for="fechaCita" class="form-label">Fecha de la cita:</label>
+            <input type="date" class="form-control" [(ngModel)]="fechaCita" id="fechaCitaEditar">
+            <div id="fechaCitaHelp" class="form-text">Recuerda poner la fecha superior a la de hoy {{ today |
+                date:'mediumDate' }} .</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="tiempoCita"   class="form-label">Hora de la cita:</label>
+            <input type="time" [(ngModel)]="tiempoCita" class="form-control" id="tiempoCitaEditar">
+        </div>
+
+        <div class="mb-3 ">
+            <label for="especialista" class="form-label">Especialista: {{especialistaSeleccionada.nombre}}, su valor es
+                de: {{especialistaSeleccionada.valor}}</label>
+        </div>
+        
+        <button type="button" id="buttonActualizarCita" class="btn btn-primary" (click)="actualizar()">Actualizar</button>
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container-sm">
+    <div class="row">
+        <h2>Actualizar estrato usuario</h2>
+    </div>
+    <div class="row g-3">
+
+        <form [formGroup]="usuarioCrearForm" (ngSubmit)="actualizar()">
+            <div class="col">
+                <label for="tipoDocumento" class="form-label">Tipo Documento: {{usuarioSelecionado.tipoDocumento}}</label>
+            </div>
+            <div class="col">
+                <label for="numeroDocumento" class="form-label">Número Documento: {{usuarioSelecionado.numeroDocumento}}</label>
+            </div>
+            <div class="col">
+                <label for="estrato" class="form-label">Estrato:</label>
+                <select validar class="form-select" name="estrato" formControlName="estrato">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+
+    </div>
+</div>

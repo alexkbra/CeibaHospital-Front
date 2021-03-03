@@ -1,0 +1,51 @@
+<div class="container-sm">
+  <div class="row">
+    <h2>Buscar usuario</h2>
+  </div>
+  <div class="row g-3">
+    <form [formGroup]="usuarioBuscarForm" (ngSubmit)="buscarUsuario()">
+      <div class="col">
+    <label for="numeroDocumento" class="form-label">Número Documento:</label>
+        <input validar type="text" id="numeroDocumento" name="numeroDocumento" placeholder="Eje: 1017205545" class="form-control" formControlName="numeroDocumento" >
+      </div>
+
+      <div class="col">        
+        <label for="tipoDocumento" class="form-label">Tipo Documento:</label>
+        <select validar class="form-select" name="tipoDocumento" id="tipoDocumento" formControlName="tipoDocumento" >
+            <option value="CC" selected>Cédula de ciudadanía</option>
+            <option value="RC">Registro Civil</option>
+            <option value="CE">Cédula de extranjería.</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <button type="submit" id="submitBuscarUsuarioCita" class="btn btn-outline-primary" >Buscar</button>
+        <a href="/cita" id="linkCancelarCita"  class="link-dark">Cancelar</a>
+      </div>
+    </form>
+      <nav class="navbar navbar-light bg-light" *ngIf="visibleMenuCita">
+        <form class="container-fluid justify-content-start">
+          <ul>
+            <li>
+              <a routerLink="./crear"  id="linkReservarCita" class="link-primary">Reservar cita</a>
+            </li>
+            <li>
+              <a routerLink="./listar" id="linkBuscarCita" class="link-success">Buscar citas</a>
+            </li>
+          </ul>
+        </form>
+      </nav>
+      
+      
+      <nav class="navbar navbar-light bg-light" *ngIf="visibleMenuUsuario">
+        <form class="container-fluid justify-content-start">
+          <p>Usuario no existe, si desea: <a href="/usuario/crear" id="linkCrearUsuario"  class="link-primary">Crear usuario</a></p>
+        </form>
+      </nav>
+
+      <router-outlet ></router-outlet>
+
+  </div>
+</div>
+
+
+
