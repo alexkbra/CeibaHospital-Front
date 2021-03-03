@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: 'http://52.226.170.146/microservice'
+  endpoint: 'https://wingtiptoys-kubernetes-f20fa504.hcp.eastus.azmk8s.io/microservice'
 };
